@@ -1,0 +1,13 @@
+{% load tree_menu_tags %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'sidebar.css' %}">
+
+<div style="margin-top: 20px;"></div>
+    <div class="home_page" >
+        {% url 'home' as index_page %}
+        <a {% if request.path == index_page %} class="main-page-link-active" {% else %} class="main-page-link" {%endif%}  href="{{index_page}}">Главная страница</a>
+    </div>
+
+    {% draw_menu 'MainMenu' %}
+
+</div>

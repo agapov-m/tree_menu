@@ -1,0 +1,24 @@
+.list {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.menu_item{
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    padding-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+.menu_item-active {
+    color: rgb(255, 221, 1);
+    text-decoration: none;
+    padding-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+.child {
+    padding-left: 20px;
+}

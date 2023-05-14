@@ -1,0 +1,16 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'draw_menu.css' %}">
+{% load mptt_tags %}
+
+
+{% recursetree menu %}
+    <li class="list">
+        {% url 'category' menu_name node.pk as item_url%}
+        <a {% if path == item_url %} class="menu_item-active" {% else %} class="menu_item" {% endif %} href="{{item_url}}">{{ node.name }}</a>
+        {% if not node.is_leaf_node %}
+            <ul class="child">
+                {{ children }}
+            </ul>
+        {% endif %}
+    </li>
+{% endrecursetree %}
